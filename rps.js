@@ -48,11 +48,11 @@ function game() {
         }
     }
     if (playerScore > computerScore) {
-        console.log('You win the game! Final score: Player ' + playerScore + ' Computer score: ' + computerScore);
+        console.log('You win the game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
     } else if (playerScore < computerScore) {
-        console.log('You lose the game! Final score: Player ' + playerScore + ' Computer score: ' + computerScore);
+        console.log('You lose the game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
     } else {
-        console.log('It\'s a tie game! Final score: Player ' + playerScore + ' Computer score: ' + computerScore);
+        console.log('It\'s a tie game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
     }
 }
 
