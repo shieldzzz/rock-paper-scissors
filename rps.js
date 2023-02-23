@@ -26,27 +26,27 @@ function playRound (playerSelection, computerSelection) {
     }
 }   
 
-function game() {
-    let playerScore = 0;
-    let computerScore = 0;
-    for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt('Choose Rock, Paper, or Scissors').toLowerCase();
-        let computerSelection = getComputerChoice();
-        let roundResult = playRound(playerSelection, computerSelection);
-        console.log(roundResult);
-        if (roundResult.includes('Win')) {
-            playerScore++;
-        } else if (roundResult.includes('Lose')) {
-            computerScore++;
-        }
-    }
-    if (playerScore > computerScore) {
-        console.log('You win the game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
-    } else if (playerScore < computerScore) {
-        console.log('You lose the game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
-    } else {
-        console.log('It\'s a tie game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
-    }
-}
+// function game() {
+//     let playerScore = 0;
+//     let computerScore = 0;
+//     for (let i = 0; i < 5; i++) {
+//         let playerSelection = prompt('Choose Rock, Paper, or Scissors').toLowerCase();
+//         let computerSelection = getComputerChoice();
+//         let roundResult = playRound(playerSelection, computerSelection);
+//         console.log(roundResult);
+//         if (roundResult.includes('Win')) {
+//             playerScore++;
+//         } else if (roundResult.includes('Lose')) {
+//             computerScore++;
+//         }
+//     }
+//     if (playerScore > computerScore) {
+//         console.log('You win the game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
+//     } else if (playerScore < computerScore) {
+//         console.log('You lose the game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
+//     } else {
+//         console.log('It\'s a tie game! \nPlayer Score: ' + playerScore + ' \nComputer Score: ' + computerScore);
+//     }
+// }
 
-game();
+// game();
