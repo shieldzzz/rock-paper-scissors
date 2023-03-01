@@ -12,11 +12,23 @@ let computerScore = 0;
 rockBtn.addEventListener('click', () => {
     const playerSelection = 'rock';
     const computerChoice = getComputerChoice();
-
+    const result = playRound(playerSelection, computerSelection);
+    // update score function
 });
 
+paperBtn.addEventListener('click', () => {
+    const playerSelection = 'paper';
+    const computerChoice = getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
+    // update score function
+});
 
-
+scissorsBtn.addEventListener('click', () => {
+    const playerSelection = 'scissors';
+    const computerChoice = getComputerChoice();
+    const result = playRound(playerSelection, computerSelection);
+    // update score function
+});
 
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
@@ -24,30 +36,22 @@ function getComputerChoice() {
     return choices[randomIndex];
 }
 
+function playRound (playerSelection, computerSelection) {
+    let result;
+    if (playerSelection === computerSelection) {
+        result = 'tie';
+    } else if (
+        (playerSelection === 'rock' && computerSelection === 'scissors') ||
+        (playerSelection === 'paper' && computerSelection === 'rock') ||
+        (playerSelection === 'scissors' && computerSelection === 'paper')
+    ) {
+        result = 'player';
+    } else {
+        result = 'computer';
+    }
+    return result;
+}
 
-
-
-
-
-// function playRound (playerSelection, computerSelection) {
-//     if (playerSelection === computerSelection) {
-//         roundWinner = 'Tie';
-//     }
-//     if (
-//     (playerSelection === 'rock' && computerSelection === 'scissors') ||
-//     (playerSelection === 'paper' && computerSelection === 'rock') ||
-//     (playerSelection === 'scissors' && computerSelection === 'paper')
-//     ) {
-//         roundWinner = 'player';
-//     }
-//     if (
-//     (playerSelection === 'rock' && computerSelection === 'paper') ||
-//     (playerSelection === 'paper' && computerSelection === 'scissors') ||
-//     (playerSelection === 'scissors' && computerSelection === 'rock')
-//     ) {
-//         roundWinner = 'computer';
-//     }
-//     return updateScore();
-// }
+// update score function
 
 
