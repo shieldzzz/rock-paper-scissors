@@ -1,18 +1,18 @@
 // Game logic
 let playerScore = 0;
 let computerScore = 0;
+let playerSelection = '';
 let roundWinner = '';
 
 const choices = ['rock', 'paper', 'scissors'];
 function getComputerChoice() {
     let randomIndex = Math.floor(Math.random() * choices.length);
     return choices[randomIndex];
-  } 
+  }
+
 let computerSelection = getComputerChoice();
-// console.log(computerSelection);
 
-
- function playRound (playerSelection, computerSelection) {
+function playRound (playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
         roundWinner = 'Tie';
     }
@@ -21,7 +21,6 @@ let computerSelection = getComputerChoice();
     (playerSelection === 'paper' && computerSelection === 'rock') ||
     (playerSelection === 'scissors' && computerSelection === 'paper')
     ) {
-        playerScore++;
         roundWinner = 'player';
     }
     if (
@@ -29,14 +28,33 @@ let computerSelection = getComputerChoice();
     (playerSelection === 'paper' && computerSelection === 'scissors') ||
     (playerSelection === 'scissors' && computerSelection === 'rock')
     ) {
-        computerScore++;
         roundWinner = 'computer';
     }
-    return roundWinner;
- };
+    return updateScore();
+}
 
-console.log(playRound('paper', getComputerChoice()));
+function updateScore() {
+    playRound(playerSelection, computerSelection);
+    if (roundWinner.includes('player')) {
+        playerScore++;
+    } else if (roundWinner.includes('computer')) {
+        computerScore++;
+    }
+    return {playerScore, computerScore}
+}
 
+
+//  console.log(playRound('rock', getComputerChoice()));
+
+const rockBtn = document.querySelector('#rock');
+rockBtn.addEventListener('click', () => {
+    playerSelection = 'rock';
+});
+
+
+
+const paperBtn = document.querySelector('#paper');
+const scissorsBtn = document.querySelector('#scissors');
 
 
 // function game() {
@@ -63,6 +81,3 @@ console.log(playRound('paper', getComputerChoice()));
 // }
 
 // game();
-
-
-// UI
