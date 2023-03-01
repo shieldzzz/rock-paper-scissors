@@ -8,7 +8,6 @@ const computerScoreText = document.getElementById('computerScore');
 let playerScore = 0;
 let computerScore = 0;
 
-// Buttons
 rockBtn.addEventListener('click', () => {
     const playerSelection = 'rock';
     const computerSelection = getComputerChoice();
@@ -52,8 +51,6 @@ function playRound (playerSelection, computerSelection) {
     return result;
 }
 
-// update score function
-
 function updateUI(result) {
     if (result === 'tie') {
         resultText.textContent = 'It\s a Tie!';
@@ -66,5 +63,21 @@ function updateUI(result) {
     }
     playerScoreText.textContent = `Player: ${playerScore}`;
     computerScoreText.textContent = `Computer: ${computerScore}`;
+
+    if (playerScore === 5) {
+        resultText.textContent = 'You win the game!';
+        disableBtns();
+    } else if (computerScore === 5) {
+        resultText.textContent = 'Computer wins the game!';
+        disableBtns();
+    }
 }
 
+function disableBtns() {
+    rockBtn.disabled = true;
+    paperBtn.disabled = true;
+    scissorsBtn.disabled = true;
+}
+
+// Play again feature?
+// Re-enable buttons, reset score
