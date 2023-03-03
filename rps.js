@@ -4,6 +4,7 @@ const scissorsBtn = document.getElementById('scissorsBtn');
 const resultText = document.getElementById('resultText');
 const playerScoreText = document.getElementById('playerScore');
 const computerScoreText = document.getElementById('computerScore');
+const playAgainBtn = document.getElementById('playAgainBtn');
 
 let playerScore = 0;
 let computerScore = 0;
@@ -27,6 +28,10 @@ scissorsBtn.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const result = playRound(playerSelection, computerSelection);
     updateUI(result);
+});
+
+playAgainBtn.addEventListener('click', () => {
+    resetGame();
 });
 
 function getComputerChoice() {
@@ -53,7 +58,7 @@ function playRound (playerSelection, computerSelection) {
 
 function updateUI(result) {
     if (result === 'tie') {
-        resultText.textContent = 'It\s a Tie!';
+        resultText.textContent = 'It\'s a Tie!';
     } else if (result === 'player') {
         resultText.textContent = 'You Win!';
         playerScore++;
@@ -67,10 +72,21 @@ function updateUI(result) {
     if (playerScore === 5) {
         resultText.textContent = 'You win the game!';
         disableBtns();
+        playAgainBtn.style.display = 'block';
     } else if (computerScore === 5) {
         resultText.textContent = 'Computer wins the game!';
         disableBtns();
+        playAgainBtn.style.display = 'block';
     }
+}
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreText.textContent = `Player: ${playerScore}`;
+    computerScoreText.textContent = `Computer: ${computerScore}`;
+    enableBtns();
+    playAgainBtn.style.display = 'none';
 }
 
 function disableBtns() {
@@ -79,5 +95,9 @@ function disableBtns() {
     scissorsBtn.disabled = true;
 }
 
-// Play again feature?
-// Re-enable buttons, reset score
+function enableBtns() {
+    rockBtn.disabled = false;
+    paperBtn.disabled = false;
+    scissorsBtn.disabled = false;
+}
+
