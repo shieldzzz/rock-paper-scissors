@@ -85,6 +85,7 @@ function resetGame() {
     computerScore = 0;
     playerScoreText.textContent = `Player: ${playerScore}`;
     computerScoreText.textContent = `Computer: ${computerScore}`;
+    resultText.textContent = '';
     enableBtns();
     playAgainBtn.style.display = 'none';
 }
