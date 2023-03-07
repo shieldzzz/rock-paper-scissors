@@ -13,21 +13,21 @@ rockBtn.addEventListener('click', () => {
     const playerSelection = 'rock';
     const computerSelection = getComputerChoice();
     const result = playRound(playerSelection, computerSelection);
-    updateUI(result);
+    updateUI(result, playerSelection, computerSelection);
 });
 
 paperBtn.addEventListener('click', () => {
     const playerSelection = 'paper';
     const computerSelection = getComputerChoice();
     const result = playRound(playerSelection, computerSelection);
-    updateUI(result);
+    updateUI(result, playerSelection, computerSelection);
 });
 
 scissorsBtn.addEventListener('click', () => {
     const playerSelection = 'scissors';
     const computerSelection = getComputerChoice();
     const result = playRound(playerSelection, computerSelection);
-    updateUI(result);
+    updateUI(result, playerSelection, computerSelection);
 });
 
 playAgainBtn.addEventListener('click', () => {
@@ -56,14 +56,17 @@ function playRound (playerSelection, computerSelection) {
     return result;
 }
 
-function updateUI(result) {
+function updateUI(result, playerSelection, computerSelection) {
+    const playerSelectionText = `You chose ${playerSelection}`;
+    const computerSelectionText = `Computer chose ${computerSelection}`;
+    
     if (result === 'tie') {
         resultText.textContent = 'It\'s a Tie!';
     } else if (result === 'player') {
-        resultText.textContent = 'You Win!';
+        resultText.textContent = `You Win! ${playerSelectionText}, ${computerSelectionText}.`;
         playerScore++;
     } else {
-        resultText.textContent = 'Computer Wins';
+        resultText.textContent = `Computer Wins! ${playerSelectionText}, ${computerSelectionText}.`;
         computerScore++;
     }
     playerScoreText.textContent = `Player: ${playerScore}`;
