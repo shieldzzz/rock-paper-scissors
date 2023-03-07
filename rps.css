@@ -8,6 +8,20 @@ body {
     color: #00e600;
 }
 
+.selection {
+    font-size: 100px;
+    background-color: transparent;
+    border: transparent;
+    color:#00e600;
+    cursor: pointer; 
+    
+}
+
+.selection:hover {
+    transform: scale(1.2);
+    transition: 0.2s ease-out;
+}
+
 #playAgainBtn {
     display: none;
 }
