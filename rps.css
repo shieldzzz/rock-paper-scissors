@@ -1,7 +1,7 @@
 html {
     border:#00e600;
     border-style: groove;
-    border-width: 5px;
+    border-width: 4px;
 }
 
 body {
@@ -14,13 +14,18 @@ body {
     color: #00e600;
 }
 
-h2 {
-    font-size: 30px;
+h1 {
+    font-size: 38px;
 }
- h3 {
-    font-size: 17;
- }
- 
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
 .selection {
     font-size: 100px;
     background-color: transparent;
@@ -36,8 +41,25 @@ h2 {
     transition: 0.2s ease-out;
 }
 
+#resultText {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.score {
+    font-size: 20px;
+}
+
 #playAgainBtn {
     display: none;
+    background-color: transparent;
+    border: #00e600;
+    border-style: groove;
+    color: #00e600;
+    font-size: 25px;
+    margin: 20px;
+    font-family: 'Source Code Pro', monospace;
+    cursor: pointer;
 }
 
 /* Typing Effect */
@@ -45,7 +67,7 @@ h2 {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    letter-spacing: .15em;
+    letter-spacing: .14em;
     animation:
     typing 3.5s steps(40, end);
 }
@@ -121,6 +143,7 @@ h2 {
       opacity: 0.24387;
     }
   }
+
   @keyframes textShadow {
     0% {
       text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
@@ -186,6 +209,7 @@ h2 {
       text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
     }
   }
+
   .crt::after {
     content: " ";
     display: block;
@@ -200,6 +224,7 @@ h2 {
     pointer-events: none;
     animation: flicker 0.15s infinite;
   }
+
   .crt::before {
     content: " ";
     display: block;
@@ -213,6 +238,7 @@ h2 {
     background-size: 100% 2px, 3px 100%;
     pointer-events: none;
   }
+
   .crt {
     animation: textShadow 1.6s infinite;
   }
