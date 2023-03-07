@@ -57,11 +57,11 @@ function playRound (playerSelection, computerSelection) {
 }
 
 function updateUI(result, playerSelection, computerSelection) {
-    const playerSelectionText = `You chose ${playerSelection}`;
-    const computerSelectionText = `Computer chose ${computerSelection}`;
+    const playerSelectionText = `You chose ${playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)}`;
+    const computerSelectionText = `Computer chose ${computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1)}`;
     
     if (result === 'tie') {
-        resultText.textContent = 'It\'s a Tie!';
+        resultText.textContent = `It\'s a Tie! ${playerSelectionText}, ${computerSelectionText}.`;
     } else if (result === 'player') {
         resultText.textContent = `You Win! ${playerSelectionText}, ${computerSelectionText}.`;
         playerScore++;
