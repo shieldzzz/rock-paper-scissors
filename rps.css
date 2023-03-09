@@ -9,7 +9,7 @@ body {
 
 .header {
   text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
   margin: 20px 0 -20px;
 }
 
@@ -17,8 +17,12 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
-  max-width: 750px;
+  max-width: 2000px;
   margin: 30px auto;
+  font-size: 1.5em;
+}
+
+.contentBreak {
   font-size: 1em;
 }
 
@@ -33,7 +37,7 @@ body {
   border: transparent;
   color:#00e600;
   cursor: pointer; 
-  font-size: 90px;
+  font-size: 125px;
 }
 
 .selection:hover {
@@ -42,12 +46,12 @@ body {
 }
 
 #resultText {
-  font-size: 20px;
+  font-size: 1em;
   margin-bottom: 15px;
 }
 
 .score {
-  font-size: 20px;
+  font-size: 1.5em;
 }
 
 .gameEnd {
@@ -61,7 +65,7 @@ body {
   border: #00e600;
   border-style: groove;
   color: #00e600;
-  font-size: 25px;
+  font-size: 1.5em;
   margin: 20px 0 0;
   font-family: 'Source Code Pro', monospace;
   cursor: pointer;
@@ -74,7 +78,7 @@ body {
   margin: 0 auto;
   letter-spacing: .14em;
   animation:
-  typing 4.5s steps(40, end);
+  typing 5s steps(40, end);
 }
 
 @keyframes typing {
@@ -248,14 +252,36 @@ body {
   animation: textShadow 1.6s infinite;
 }
 
-@media (max-width: 670px ) {
+@media (max-width: 667px ) {
   h1 {
-    font-size: .85em;
+    font-size: .5em;
+  }
+  .typewriter {
+    letter-spacing: .10em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+  h3 {
+    font-size: .9em;
+  }
+  .main-content {
+    font-size: 1.5em;
   }
   .contentBreak {
-    font-size: .30em;
+    font-size: .3em;
   }
   .selection {
-    font-size: 3em;
+    font-size: 60px;
+  }
+  #resultText {
+    font-size: .75em;
+    margin-top: .5em;
+  }
+  .score {
+    font-size: 1em;
+  }
+  #playAgainBtn {
+    font-size: 1.3em;
   }
 }
