@@ -12,27 +12,34 @@
     <title>Rock Paper Scissors </title>
 </head>
 <body class="crt">
-    <header>
-        <h1 class="typewriter">Rock [✊] Paper [✋] Scissors [✌️]</h1>
+    <header class="header">
+        <h1 class="typewriter">
+            <span>Rock [✊]</span>
+            <span>Paper [✋]</span> 
+            <span>Scissors [✌️]</span>
+        </h1>
     </header>
-    <p class="contentBreak">===========================================================================</p>
-    <h2>Make Your Choice</h2>
-    <div class="selections">
-        <button class="selection" id="rockBtn">[✊]</button>
-        <button class="selection" id="paperBtn">[✋]</button>
-        <button class="selection" id="scissorsBtn">[✌️]</button>
-    </div>
-    <h3>First to 5 points wins</h3>
-    <p class="contentBreak">===========================================================================</p>
-    <div id="resultText"></div>
-    <div class="score" id="playerScore">
-        Player Score: 0
-    </div>
-    <div class="score" id="computerScore">
-        Computer Score: 0
-    </div>
-    <div id="resetGame">
-        <button id="playAgainBtn">Play Again?</button>
-    </div>
+    <main class="main-content">
+        <p class="contentBreak">===========================================================================</p>
+        <h2>Make Your Choice</h2>
+        <div class="selections">
+            <button class="selection" id="rockBtn">[✊]</button>
+            <button class="selection" id="paperBtn">[✋]</button>
+            <button class="selection" id="scissorsBtn">[✌️]</button>
+        </div>
+        <h3>First to 5 points wins</h3>
+        <p class="contentBreak">===========================================================================</p>
+        <div class="results">
+            <div id="resultText"></div>
+            <div class="score" id="playerScore">
+                Player Score: 0
+            </div>
+            <div class="score" id="computerScore">
+                Computer Score: 0
+            </div>
+        <div class="gameEnd">
+            <button id="playAgainBtn">Play Again?</button>
+        </div>
+    </main>
 </body>
 </html>
