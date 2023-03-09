@@ -252,6 +252,23 @@ body {
   animation: textShadow 1.6s infinite;
 }
 
+footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.github-link {
+  margin: .5em 1em 1em;
+  width: 40px;
+  height: 40px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+.github-link:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
 @media (max-width: 667px ) {
   h1 {
     font-size: .5em;
