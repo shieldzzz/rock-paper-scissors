@@ -102,37 +102,3 @@ footer {
 .github-link:hover {
   transform: rotate(360deg) scale(1.2);
 }
-
-@media (max-width: 667px ) {
-  h1 {
-    font-size: .5em;
-  }
-  .typewriter {
-    letter-spacing: .10em;
-  }
-  h2 {
-    font-size: 1.2em;
-  }
-  h3 {
-    font-size: .9em;
-  }
-  .main-content {
-    font-size: 1.5em;
-  }
-  .contentBreak {
-    font-size: .3em;
-  }
-  .selection {
-    font-size: 60px;
-  }
-  #resultText {
-    font-size: .75em;
-    margin-top: .5em;
-  }
-  .score {
-    font-size: 1em;
-  }
-  #playAgainBtn {
-    font-size: 1.3em;
-  }
-}
